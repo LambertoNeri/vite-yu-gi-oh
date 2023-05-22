@@ -6,6 +6,7 @@
   import { store } from './store'
 
 
+
   export default {
     data() {
       return {
@@ -17,10 +18,10 @@
       AppMain,
       AppFooter,
     },
-    creted() {
+    created() {
       axios
-        .get('https://db.ygoprodeck.com/api/v7/cardinfo.php?&fname=Acrobatic Magician')
-        .then(response => (this.store.cardList = response.data.name));
+        .get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
+        .then(response => (this.store.cardList = response.data.data));
     },
   }
 </script>
@@ -28,9 +29,11 @@
 <template>
   <AppHeader/>
   <AppMain/>
-  <AppFooter/>
 </template>
 
 <style lang="scss" >
   @use '../src/assets/styles/general.scss' as *;
+
+  
+  
 </style>
