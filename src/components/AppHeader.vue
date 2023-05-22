@@ -1,12 +1,16 @@
 <script>
-    export default {
-        
-    }
+   export default {
+    props: {
+        cardList: Object,
+    },
+   };
 </script>
 
 
 <template>
-<header>io sono l'header</header>
+    <div class="card">
+        <span>{{ cardList }} ciao</span>
+    </div>
 </template>
 
 

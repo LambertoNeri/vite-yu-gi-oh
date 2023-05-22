@@ -20,7 +20,7 @@
     creted() {
       axios
         .get('https://db.ygoprodeck.com/api/v7/cardinfo.php?&fname=Acrobatic Magician')
-        .then(response => (this.store.cardList = response.data));
+        .then(response => (this.store.cardList = response.data.name));
     },
   }
 </script>
