@@ -25,7 +25,7 @@
 
 <style lang="scss" scoped>
     .single-card{
-        width: 250px;
+        width: 18.109%;
         max-height: 600px;
         img{
             width: 100%;
@@ -39,7 +39,6 @@
             align-items: center;
             padding-top: 1.5rem;
             padding-bottom: 1.5rem;
-
             .name{
                 color: white;
                 font-size: 1.3rem;

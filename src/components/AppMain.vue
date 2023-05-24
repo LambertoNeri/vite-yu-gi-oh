@@ -23,15 +23,17 @@
                 <option value="Alien">Pincolo</option>
             </select>
             <div class="white-bg">
-                <div class="card-section">
+                <div class="black-bg">
                     <span class="found">Found {{ store.cardList.length }} cards</span>
+                </div>
+                <div class="card-section">
                     <div class="card-container">
                         <cardResults/>
                     </div>
-                    
-
                 </div>
+                    
             </div>
+
         </div>
       
     </div>
@@ -43,7 +45,7 @@
 <style lang="scss" scoped>
     .bg{
         background-color: #D48F38;
-        height: calc(100vh - 11vh);
+        
         .container{
             height: 100%;
             max-width: 1500px;
@@ -59,6 +61,17 @@
                 margin-left: 5rem;
                 border-radius: 5px;
            }
+           .black-bg{
+                background-color: #212529;
+                max-width: 90%;
+                margin-inline: auto;
+                height: 10vh;
+                display: flex;
+                align-items: center;
+                color: white;
+                padding-left: 2rem;
+                font-size: 2rem;
+            }
            .white-bg{
                 max-width: 90%;
                 margin-inline: auto;
@@ -69,12 +82,9 @@
                 .card-section{
                     display: flex;
                     flex-direction: column;
-                    gap: 1.5rem;
-                    height: 10vh;
-                    background-color: #212529;
-                    max-width: 80%;
+                    gap: 0rem;
+                    max-width: 90%;
                     margin-inline: auto;  
-                    padding-top: 2rem;
                     .found{
                         color: white;
                         font-size: 2rem;

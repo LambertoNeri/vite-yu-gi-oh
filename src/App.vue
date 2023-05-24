@@ -19,10 +19,21 @@
       AppFooter,
     },
     created() {
-      axios
+      axios.all([
+        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=Magician'),
+        axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+      ])
+      .then(responseArr => {
+      console.log('Date created: ', responseArr[0].data.data);
+      console.log('Date created: ', responseArr[1].data);
+      this.store.cardList = responseArr[0].data.data
+      this.store.archetypeList = responseArr[1].data
+      });
+    }
+     /* axios
         .get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
         .then(response => (this.store.cardList = response.data.data));
-    },
+    }, */
   }
 </script>
 
