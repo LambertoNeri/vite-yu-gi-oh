@@ -1,9 +1,11 @@
 <script>
     import { store } from '../store'
     import cardResults from './cardResults.vue'
+    import AppArchetype from './AppArchetype.vue';
     export default {
         components: {
             cardResults,
+            AppArchetype,
         },
         data() {
             return {
@@ -17,11 +19,7 @@
 <main>
     <div class="bg">
         <div class="container">
-            <select name="archtype" id="">
-                <option value="Alien">Alien</option>
-                <option value="Alien">Dragon</option>
-                <option value="Alien">Pincolo</option>
-            </select>
+            <AppArchetype/>
             <div class="white-bg">
                 <div class="black-bg">
                     <span class="found">Found {{ store.cardList.length }} cards</span>
@@ -50,17 +48,6 @@
             height: 100%;
             max-width: 1500px;
             margin-inline: auto;
-            select{
-                padding-left: 1rem;
-                padding-right: 6rem;
-                padding-top: 0.5rem;
-                padding-bottom: 0.5rem;
-                font-size: 1.5rem;
-                border: none;
-                margin-top: 1rem;
-                margin-left: 5rem;
-                border-radius: 5px;
-           }
            .black-bg{
                 background-color: #212529;
                 max-width: 90%;
